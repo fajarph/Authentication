@@ -1,0 +1,97 @@
+//Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Fajar Putra Herianto",
+    "email": "Fajar@gmail.com",
+    "password": "12345678",
+    "confPassword": "12345678",
+    "role": "admin"
+}
+
+###
+// get All Users
+GET http://localhost:5000/users
+
+###
+//Get Single User
+GET http://localhost:5000/users/82451ce0-e1c6-4018-a981-491888762011
+
+###
+//Update User
+PATCH http://localhost:5000/users/2886ff52-ade3-4328-80f7-7d0192fe8849
+Content-Type: application/json
+
+{
+    "name": "John Doe Bro",
+    "email": "John@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//Delete User
+DELETE http://localhost:5000/users/cc85af97-d765-484c-9ef3-1cf24ee23ffe
+
+
+###
+//Login Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "Fajar@gmail.com",
+    "password": "12345678"
+}
+
+###
+//Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "John@gmail.com",
+    "password": "12345678"
+}
+
+###
+//Cek Akun
+GET http://localhost:5000/me
+
+###
+//LogOut Akun
+DELETE http://localhost:5000/logout
+
+###
+//Get All Product
+GET http://localhost:5000/products
+
+###
+//Get Single Product
+GET http://localhost:5000/products/46767075-0670-49ea-851b-6bc8dac8c17e
+
+###
+//Post Data Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Pocari",
+    "price": 6500
+}
+
+###
+//Update Data Product
+PATCH http://localhost:5000/products/7bdf0b3a-f33c-4c73-b006-87be5642dc84
+Content-Type: application/json
+
+{
+    "name": "Cimori",
+    "price": 8500
+}
+
+###
+//Deleted Product
+DELETE http://localhost:5000/products/46767075-0670-49ea-851b-6bc8dac8c17e
